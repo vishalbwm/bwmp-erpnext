@@ -127,7 +127,18 @@ doc_events = {
 
 	"*": {
 		"validate": "bwmp_erpnext.bwmp_erpnext.setup.update_naming_prefix",
-	}
+	},
+
+	# GST POS fix — remove once IC PR #4302 is deployed
+	"Purchase Order": {
+		"validate": "bwmp_erpnext.bwmp_erpnext.fix_gst_pos.fix_purchase_pos",
+	},
+	"Purchase Invoice": {
+		"validate": "bwmp_erpnext.bwmp_erpnext.fix_gst_pos.fix_purchase_pos",
+	},
+	"Purchase Receipt": {
+		"validate": "bwmp_erpnext.bwmp_erpnext.fix_gst_pos.fix_purchase_pos",
+	},
 }
 
 # Scheduled Tasks
@@ -205,4 +216,3 @@ doc_events = {
 # auth_hooks = [
 # 	"bwmp_erpnext.auth.validate"
 # ]
-
