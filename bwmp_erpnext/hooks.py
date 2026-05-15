@@ -18,7 +18,6 @@ app_license = "MIT"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/bwmp_erpnext/css/bwmp_erpnext.css"
-app_include_js = "bwmp_erpnext.bundle.js"
 app_include_js = "/assets/bwmp_erpnext/js/serial_no_batch_selector.js"
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -121,23 +120,19 @@ doc_events = {
 		"on_cancel": "bwmp_erpnext.bwmp_erpnext.setup.unlink_uat_no_and_uat_date"
 	},
 
-	"Serial and Batch Bundle": {
-		"on_submit": "bwmp_erpnext.custom_python.custom_serial_and_batch_bundle.on_submit",
-	},
-
 	"*": {
 		"validate": "bwmp_erpnext.bwmp_erpnext.setup.update_naming_prefix",
 	},
 
 	# GST POS fix — remove once IC PR #4302 is deployed
 	"Purchase Order": {
-		"validate": "bwmp_erpnext.bwmp_erpnext.fix_gst_pos.fix_purchase_pos",
+		"validate": "bwmp_erpnext.fix_gst_pos.fix_purchase_pos",
 	},
 	"Purchase Invoice": {
-		"validate": "bwmp_erpnext.bwmp_erpnext.fix_gst_pos.fix_purchase_pos",
+		"validate": "bwmp_erpnext.fix_gst_pos.fix_purchase_pos",
 	},
 	"Purchase Receipt": {
-		"validate": "bwmp_erpnext.bwmp_erpnext.fix_gst_pos.fix_purchase_pos",
+		"validate": "bwmp_erpnext.fix_gst_pos.fix_purchase_pos",
 	},
 }
 
