@@ -18,7 +18,7 @@ app_license = "MIT"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/bwmp_erpnext/css/bwmp_erpnext.css"
-app_include_js = "/assets/bwmp_erpnext/js/serial_no_batch_selector.js"
+# app_include_js = "/assets/bwmp_erpnext/js/serial_no_batch_selector.js"  # S27: disabled custom batch picker
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "bwmp_erpnext/public/scss/website"
@@ -38,8 +38,8 @@ override_doctype_class = {
 # include js in doctype views
 doctype_js = {
     "Payment Order" : "bwmp_erpnext/setup.js",
-	"Stock Entry" : "bwmp_erpnext/stock_entry.js",
-	"Delivery Note" : "bwmp_erpnext/delivery_note.js"
+	# "Stock Entry" : "bwmp_erpnext/stock_entry.js",       # S27: disabled custom batch picker
+	# "Delivery Note" : "bwmp_erpnext/delivery_note.js"     # S27: disabled custom batch picker
 }
 
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
